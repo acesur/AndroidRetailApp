@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <activity android:name=".AccelerometerActivity"></activity>
         <activity android:name=".BroadCastActivity"></activity>
         <activity android:name=".CheckAllActivity"></activity>

@@ -10,6 +10,31 @@
         android:name="com.e.androidretailapp.fragment.HomeFragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+
+
+    <fragment
+
+        android:id="@+id/navigation_cart"
+        android:name="com.e.androidretailapp.fragment.CartFragment.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart"
+        />
+
+    <fragment
+
+        android:id="@+id/navigation_contact"
+        android:name="com.e.androidretailapp.fragment.ContactFragment.ContactFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact"
+        />
+
+    <fragment
+
+        android:id="@+id/navigation_about"
+        android:name="com.e.androidretailapp.fragment.AboutFragment.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about"
+        />
 <!--
     <fragment
         android:id="@+id/nav_gallery"

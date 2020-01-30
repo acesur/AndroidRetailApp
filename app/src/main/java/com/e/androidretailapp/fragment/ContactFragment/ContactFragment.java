@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.e.androidretailapp.R;
 
@@ -23,6 +24,9 @@ public class ContactFragment extends Fragment {
 
     private EditText etPhoneNo;
     private Button btnDial;
+    private EditText etText;
+    private Button btnAppend;
+    private TextView tvText;
 
     public ContactFragment() {
         // Required empty public constructor
@@ -45,6 +49,17 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        etText = root.findViewById(R.id.etText);
+        btnAppend = root.findViewById(R.id.btnAppend);
+        tvText = root.findViewById(R.id.tvText);
+
+        btnAppend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                appendText();
+            }
+        });
+
     return  root;
     }
 
@@ -53,6 +68,11 @@ public class ContactFragment extends Fragment {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:0123456789"));
         startActivity(intent);
+    }
+
+    private void appendText() {
+        // "\n" is used for new line
+        tvText.append(etText.getText().toString() + "\n");
     }
 
 }

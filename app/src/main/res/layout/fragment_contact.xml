@@ -27,6 +27,28 @@
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_margin="20dp"
+            android:id="@+id/etText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a text"
+            />
+
+        <Button
+            android:id="@+id/btnAppend"
+            android:layout_margin="20dp"
+            android:text="Append text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/tvText"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </FrameLayout>

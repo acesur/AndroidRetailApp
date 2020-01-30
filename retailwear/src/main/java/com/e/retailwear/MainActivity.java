@@ -13,10 +13,22 @@ public class MainActivity extends WearableActivity {
     private Button btnShow;
     private EditText etFirst;
 
+    private TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mTextView = (TextView) findViewById(R.id.text);
+
+        String message = getIntent().getStringExtra("message");
+        if (message == null){
+            mTextView.setText("No message");
+        }
+        mTextView.setText(message);
+
+
 
         tvOutput = findViewById(R.id.tvOutput);
         btnShow = findViewById(R.id.btnShow);

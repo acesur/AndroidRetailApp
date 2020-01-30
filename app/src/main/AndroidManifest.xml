@@ -3,7 +3,6 @@
     package="com.e.androidretailapp">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -16,16 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".AccelerometerActivity"></activity>
-        <activity android:name=".BroadCastActivity"></activity>
-        <activity android:name=".CheckAllActivity"></activity>
-        <activity android:name=".activities.AddTaskActivity"></activity>
-        <activity android:name=".activities.SignupActivity"></activity>
-        <activity android:name=".activities.LoginActivity"></activity>
-        <activity android:name=".activities.DashboardActivity"></activity>
-
+        <activity android:name=".activities.WearToPhoneActivity"></activity>
+        <activity android:name=".AccelerometerActivity" />
+        <activity android:name=".BroadCastActivity" />
+        <activity android:name=".CheckAllActivity" />
+        <activity android:name=".activities.AddTaskActivity" />
+        <activity android:name=".activities.SignupActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.DashboardActivity" />
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,9 +30,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
     </application>
 
 </manifest>

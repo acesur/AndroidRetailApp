@@ -4,11 +4,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.ContactFragment.ContactFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <EditText
+        android:textSize="20sp"
+        android:inputType="phone"
+        android:id="@+id/etPhoneNo"
+        android:layout_margin="20dp"
+        android:autoLink="phone"
+        android:linksClickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnDial"
+        android:text="Dial"
+        android:textSize="20sp"
+
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </FrameLayout>

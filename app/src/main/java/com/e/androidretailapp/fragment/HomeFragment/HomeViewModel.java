@@ -1,4 +1,6 @@
 package com.e.androidretailapp.fragment.HomeFragment;
 
-public class HomeViewModel {
+import androidx.lifecycle.ViewModel;
+
+public class HomeViewModel extends ViewModel {
 }

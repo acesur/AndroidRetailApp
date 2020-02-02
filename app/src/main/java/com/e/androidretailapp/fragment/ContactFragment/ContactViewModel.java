@@ -1,4 +1,6 @@
 package com.e.androidretailapp.fragment.ContactFragment;
 
-public class ContactViewModel  {
+import androidx.lifecycle.ViewModel;
+
+public class ContactViewModel extends ViewModel {
 }

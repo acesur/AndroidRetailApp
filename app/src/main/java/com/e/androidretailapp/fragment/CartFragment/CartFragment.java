@@ -15,6 +15,7 @@ import com.e.androidretailapp.R;
  * A simple {@link Fragment} subclass.
  */
 public class CartFragment extends Fragment {
+    private CartViewModel cartViewModel;
 
 
     public CartFragment() {
@@ -26,7 +27,9 @@ public class CartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false);
+        View root = inflater.inflate(R.layout.fragment_cart, container, false);
+
+        return root;
     }
 
 }

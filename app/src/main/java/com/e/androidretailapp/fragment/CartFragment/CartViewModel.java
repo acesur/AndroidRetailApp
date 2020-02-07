@@ -1,4 +1,6 @@
 package com.e.androidretailapp.fragment.CartFragment;
 
-public class CartViewModel {
+import androidx.lifecycle.ViewModel;
+
+public class CartViewModel extends ViewModel {
 }

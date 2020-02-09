@@ -33,7 +33,7 @@ public class ProductTrends extends RecyclerView.Adapter<ProductTrends.StoryViewH
     @Override
     public StoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.insta_story_card, parent, false);
+                        .inflate(R.layout.product_cart_cart, parent, false);
 
         return new StoryViewHolder(view, mContext, trendsList);
     }
@@ -41,8 +41,8 @@ public class ProductTrends extends RecyclerView.Adapter<ProductTrends.StoryViewH
     @Override
     public void onBindViewHolder(@NonNull StoryViewHolder holder, int position) {
         ProductCategory story = trendsList.get(position);
-        holder.story.setImageResource(story.getDailyPhoto());
-        holder.name.setText(story.getName());
+        holder.story.setImageResource(story.getProductPhoto());
+        holder.name.setText(story.getProductName());
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ProductTrends extends RecyclerView.Adapter<ProductTrends.StoryViewH
         public StoryViewHolder(@NonNull View itemView, final Context mContext, final List<ProductCategory> list) {
             super(itemView);
             story = itemView.findViewById(R.id.imgInstaStory);
-            name = itemView.findViewById(R.id.tvStoryBy);
+
             this.mContext = mContext ;
             this.list = list;
 
@@ -68,7 +68,7 @@ public class ProductTrends extends RecyclerView.Adapter<ProductTrends.StoryViewH
                 @Override
                 public void onClick(View v) {
                     ProductCategory story = list.get(getAdapterPosition());
-                    Toast.makeText(mContext, "" + story.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "" + story.getProductName(), Toast.LENGTH_SHORT).show();
 
                 }
             });

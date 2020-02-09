@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.e.androidretailapp.R;
 import com.e.androidretailapp.adapter.ProductAdapter;
+import com.e.androidretailapp.adapter.ProductTrends;
 import com.e.androidretailapp.model.Product;
 import com.e.androidretailapp.model.ProductCategory;
 
@@ -52,6 +53,9 @@ public class CartFragment extends Fragment {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
 
+        ProductTrends productCategory =  new ProductTrends(productCategoriesList, getContext());
+        rvProduct.setAdapter(productCategory);
+        rvProduct.setLayoutManager(layoutManager);
 
         return root;
     }

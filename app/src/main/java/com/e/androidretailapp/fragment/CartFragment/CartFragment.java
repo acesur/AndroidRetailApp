@@ -10,10 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.e.androidretailapp.R;
 import com.e.androidretailapp.adapter.ProductAdapter;
 import com.e.androidretailapp.model.Product;
+import com.e.androidretailapp.model.ProductCategory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ import java.util.List;
 public class CartFragment extends Fragment {
 
     public static List<Product> productList = new ArrayList<>();
+    public static List<ProductCategory> productCategoriesList = new ArrayList<>();
 
     RecyclerView recyclerView;
     RecyclerView rvProduct;
@@ -46,6 +49,8 @@ public class CartFragment extends Fragment {
         ProductAdapter productAdapter = new ProductAdapter(CartFragment.productList);
         recyclerView.setAdapter(productAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false);
 
 
         return root;
